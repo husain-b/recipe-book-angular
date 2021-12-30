@@ -1,0 +1,29 @@
+<div class="container-fluid mr-0">
+  <!-- <div class="row">
+    <div class="col">
+      <h5 class="text-secondary">Recipes</h5>
+    </div>
+  </div> -->
+  <div class="row mt-1">
+    <div class="col">
+      <app-recipe-item
+        *ngFor="let recipeEl of recipes; let i = index"
+        [recipe]="recipeEl"
+        [index]="i"
+      ></app-recipe-item>
+    </div>
+  </div>
+
+  <div class="row my-3">
+    <div class="col">
+      <div class="d-flex justify-content-center">
+        <button
+          class="btn btn-success newRecipeButton"
+          (click)="onNewRecipeClicked()"
+        >
+          New Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

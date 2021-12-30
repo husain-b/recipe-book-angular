@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 700px;
+  background: url(./../../assets/recipes-background.jpg);
+  /* background-repeat: no-repeat;
+  background-size: 100% 100%; */
+  background-size: cover;
+  background-repeat: center;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.loginBox {
+  width:320px;
+  background: rgb(230 224 224);
+  color: black;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.formCover {
+  padding: 70px 23px 5px 23px;
+}
+
+h4 {
+  font-weight: 535;
+  color: #054177;
+}
+
+label {
+  font-weight: 550;
+  color: #054177;
+}
+
+button {
+  background-color: #356794;
+  border-color: #356794;
+  color: white;
+}
+
+a {
+  cursor: pointer;
+  color: #054177 !important;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.invalidData p {
+  color: red;
+  display: inline;
+}
+
+.invalidData span {
+  color: red;
+}
+
+.height-change {
+  height: 430px;
+}
+
+.height-changeMore {
+  height: 460px;
+}
+
+.center-items {
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.error {
+  margin-bottom: 10px;
+  color: rgb(121, 36, 36);
+  background-color: rgb(247, 192, 192);
+  padding: 5px 3px 5px 3px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.account-message {
+  font-size: 0.95rem;
+  font-weight: 530;
+  margin-bottom: 3rem;
+}
+.loginSignUpButton {
+  font-size: 0.97rem;
+}
+
+button.loginSignUpButton:hover {
+  color: white !important;
+}

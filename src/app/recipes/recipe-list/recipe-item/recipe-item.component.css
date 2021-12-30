@@ -1,0 +1,23 @@
+/* p {
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+a {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #356794;
+  color: white;
+  border-color: #e9d7d7;
+}
+
+h6 {
+  color: #2d6aa0;
+}
+.active h6 {
+  color: white;
+}

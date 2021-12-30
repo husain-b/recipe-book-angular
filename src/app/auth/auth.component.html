@@ -1,0 +1,138 @@
+<ng-template appPlaceholder></ng-template>
+<body>
+  
+      <div class="loginBox sm-3" [ngClass]="{ 'height-change': loadingMode }">
+        <img src="./../../assets/avatar.png" alt="" class="avatar" />
+        <div class="formCover">
+          <h4 class="mb-3">
+            {{ loginMode ? "Login Here" : "Create a New Account" }}
+          </h4>
+          <div class="center-items" *ngIf="loadingMode">
+            <app-loading-spinner></app-loading-spinner>
+          </div>
+    
+          <form
+            [formGroup]="authForm"
+            (ngSubmit)="onSubmit()"
+            #f="ngForm"
+            *ngIf="!loadingMode"
+          >
+            <!-- <div class="form-group mt-1" *ngIf="!loginMode">
+            <label for="fullname">Full Name</label>
+            <input
+              type="test"
+              id="fullname"
+              class="form-control form-control-sm"
+              formControlName="password"
+              name="password"
+            />
+            <div
+              class="invalidData"
+              *ngIf="
+                !authForm.get('password').valid &&
+                authForm.get('password').touched
+              "
+            >
+              <small>
+                <p>Password contains atlest 6 characters</p>
+                <span class="float-right">
+                  <img
+                    src="../../assets/red-exclamation-point.png"
+                    style="height: 17px"
+                  />
+                </span>
+              </small>
+            </div>
+          </div> -->
+          <div class="form-group" *ngIf="!loginMode">
+            <label for="email">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control form-control-sm"
+              formControlName="name"
+            />
+            </div>
+        
+            <div class="form-group mt-1">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control form-control-sm"
+                formControlName="email"
+              />
+              <div
+                class="invalidData"
+                *ngIf="
+                  !authForm.get('email').valid && authForm.get('email').touched
+                "
+              >
+                <small>
+                  <p>Please provide a valid email address</p>
+                  <span class="float-right">
+                    <img
+                      src="../../assets/red-exclamation-point.png"
+                      style="height: 18px"
+                    />
+                  </span>
+                </small>
+              </div>
+            </div>
+            <div class="form-group mt-1">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="form-control form-control-sm"
+                formControlName="password"
+                name="password"
+              />
+              <div
+                class="invalidData"
+                *ngIf="
+                  !authForm.get('password').valid &&
+                  authForm.get('password').touched
+                "
+              >
+                <small>
+                  <p>Password contains atlest 6 characters</p>
+                  <span class="float-right">
+                    <img
+                      src="../../assets/red-exclamation-point.png"
+                      style="height: 17px"
+                    />
+                  </span>
+                </small>
+              </div>
+            </div>
+            <div class="error" *ngIf="error">
+              <small>{{ error }}</small>
+            </div>
+            <!-- <app-alertt [message]="error" *ngIf="error"></app-alertt> -->
+    
+            <div class="row">
+              <div class="col-sm-12">
+                <button class="btn loginSignUpButton" type="submit">
+                  {{ loginMode ? "Login" : "Sign Up" }}
+                </button>
+              </div>
+            </div>
+            <div class="row mt-2" *ngIf="loginMode">
+              <div class="col-sm-12 account-message">
+                <span>Dont have an account? </span>
+                <a (click)="onSwitchMode()">Sign Up</a>
+              </div>
+            </div>
+            <div class="row mt-2" *ngIf="!loginMode">
+              <div class="col-sm-12 account-message">
+                <span>Already have an account? </span>
+                <a (click)="onSwitchMode()">Login</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+ 
+  
+</body>

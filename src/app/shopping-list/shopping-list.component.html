@@ -1,0 +1,31 @@
+<div class="container-fluid mb-3">
+  <div class="row">
+    <div class="col">
+      <app-shopping-list-edit (eventEmitter)="(test)"></app-shopping-list-edit>
+      <div>{{ test }}</div>
+      <div class="row mt-1">
+        <div class="col">
+          <div class="list-group">
+            <small>
+              <a
+                class="
+                  list-group-item list-group-item-action
+                  flex-column
+                  align-items-start
+                "
+                *ngFor="
+                  let ingredient of (ingredients | async).ingredients;
+                  let i = index
+                "
+                style="font-size: 0.9rem; cursor: pointer"
+                (click)="onEditIngredient(i)"
+                >{{ ingredient.name }}
+                <span class="badge badge-pill">{{ ingredient.amount }}</span>
+              </a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

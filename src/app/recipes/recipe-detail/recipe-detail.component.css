@@ -1,0 +1,23 @@
+.recipeDetailBorder {
+  border: solid #dbe0e4 1px;
+  border-radius: 3.5px;
+}
+
+a {
+  cursor: pointer;
+}
+h5,
+h6 {
+  color: #356794;
+}
+
+button {
+  background-color: #356794;
+  border-color: #356794;
+  color: white;
+}
+
+.badge {
+  background-color: #356794;
+  color: white;
+}

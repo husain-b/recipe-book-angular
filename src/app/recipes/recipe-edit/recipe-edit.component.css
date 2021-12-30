@@ -1,0 +1,32 @@
+.recipeEditBorder {
+  border: solid #dbe0e4 1px;
+  border-radius: 3.5px;
+}
+
+label,
+h6 {
+  font-weight: 600;
+  color: #054177;
+}
+.addIngredientButton {
+  background-color: #356794;
+  border-color: #356794;
+  color: white;
+  margin: 0 auto;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.test {
+  background-color: red;
+}
+
+/* .creteNewRecipeLogo {
+  color: #fff;
+  background-color: #356794;
+
+  border-radius: 2px;
+} */

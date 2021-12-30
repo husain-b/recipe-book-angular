@@ -1,0 +1,33 @@
+nav,
+.header {
+  background-color: #354a5d;
+  color: white;
+}
+
+.active {
+  background-color: #fff;
+  color: black;
+  font-weight: 600;
+}
+
+.myActiveClass {
+  background-color: #fff;
+  color: black;
+  font-weight: 5px;
+}
+
+a {
+  cursor: pointer;
+}
+
+li {
+  border-radius: 5rem;
+  margin: 2px 2px 0px 2px;
+}
+
+.nav-avatar {
+  height: 22px;
+  background-color: #fff;
+  border-radius: 11px;
+  padding: 0;
+}

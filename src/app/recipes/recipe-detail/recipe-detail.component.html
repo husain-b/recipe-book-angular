@@ -1,0 +1,91 @@
+<div
+  class="container-fluid recipeDetailBorder p-3 pl-4"
+  style="margin-right: 0px"
+>
+  <!-- <div class="row mb-1">
+    <div class="col">
+      <h5 class="text-secondary">Recipe detail</h5>
+    </div>
+  </div> -->
+  <div class="row mb-2">
+    <div class="col">
+      <!-- <h5 style="color: #2d6aa0">{{ recipe.name }}</h5> -->
+      <h5 style="font-size: 1.4rem">{{ recipe.name | uppercase }}</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img
+        [src]="recipe.imgPath"
+        alt="{{ recipe.name }}"
+        class="img-fluid rounded"
+        style="
+          height: 230px;
+          width: 350px;
+          border: 0.03rem solid rgb(228, 226, 226);
+        "
+      />
+    </div>
+  </div>
+  <div class="row pt-3">
+    <div class="col">
+      <p style="font-weight: 575; font-family: sans-serif; font-size: 1.2rem">
+        {{ recipe.description }}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h6 style="font-weight: 1.2rem; font-size: 1.25rem">Ingredients</h6>
+
+      <!-- <span *ngFor="let ingredient of recipe.ingredients; let i = index">
+        <span *ngIf="i === recipe.ingredients.length - 1; else otherwise">
+          {{ ingredient.name }}
+          <span class="badge badge-pill">{{ ingredient.amount }} </span>
+        </span>
+        <ng-template #otherwise>
+          <span>
+            {{ ingredient.name }}
+            <span class="badge badge-pill">{{ ingredient.amount }} </span>,
+          </span>
+        </ng-template>
+      </span> -->
+      <ul class="">
+        <li *ngFor="let ingredient of recipe.ingredients; let i = index">
+          <span style="font-weight: 500">
+            {{ ingredient.name }}
+            <span class="badge badge-pill">{{ ingredient.amount }} </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="col">
+      <div class="btn-group">
+        <button
+          class="btn btn-sm dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Manage
+        </button>
+        <div class="dropdown-menu">
+          <a
+            class="dropdown-item"
+            (click)="onAddToList()"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Add Ingredients to the Shopping List"
+            >Add to List</a
+          >
+          <a class="dropdown-item" (click)="onRecipeEdit()">Edit Recipe</a>
+          <a class="dropdown-item" (click)="onRecipeDelete()">Delete</a>
+          <a class="dropdown-item" (click)="onCopy()">Copy to New</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

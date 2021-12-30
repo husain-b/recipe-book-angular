@@ -1,0 +1,32 @@
+<div class="list-group">
+  <a
+    class="list-group-item list-group-item-action flex-column align-items-start"
+    (click)="onRecipeSelect()"
+    [routerLink]="[index]"
+    routerLinkActive="active"
+  >
+    <div class="float-left pr-3" style="width: 75%">
+      <div class="d-flex w-100 justify-content-between">
+        <h6 class="mb-2" style="font-size: 1.07rem">
+          {{ recipe.name | shorten: 28 }}
+        </h6>
+        <!--<small>3 days ago</small>-->
+      </div>
+
+      <p
+        class="mb-1"
+        style="font-family: sans-serif; font-size: 0.9rem"
+        #paragraphElement
+      >
+        {{ recipe.description | shorten: 70 }}
+      </p>
+    </div>
+    <span class="float-right mt-2" style="width: 25%">
+      <img
+        [src]="recipe.imgPath"
+        alt="{{ recipe.name }}"
+        class="img-fluid rounded"
+      />
+    </span>
+  </a>
+</div>
